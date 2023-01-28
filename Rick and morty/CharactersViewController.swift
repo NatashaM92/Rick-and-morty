@@ -55,32 +55,3 @@ extension CharactersViewController: UICollectionViewDelegateFlowLayout {
     }
 }
     
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        fetchCharacters()
-//    }
-
-
-//extension CharactersViewController {
-//
-//    private func fetchCharacters() {
-//        guard let url = URL(string: Link.url.rawValue) else { return }
-//
-//        URLSession.shared.dataTask(with: url) { data, _, error in
-//
-//            guard let data = data else {
-//                print(error?.localizedDescription ?? "no error description")
-//                return
-//            }
-//
-//            do {
-//                let characters = try JSONDecoder().decode(CharacterApp.self, from: data)
-//                print(characters)
-//
-//            } catch let error {
-//                print(error)
-//            }
-//        } .resume()
-//    }
-//}
