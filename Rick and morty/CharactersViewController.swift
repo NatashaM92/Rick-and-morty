@@ -16,12 +16,15 @@ class CharactersViewController: UICollectionViewController {
         fetchCharacters()
     }
     
-    
-    
     private func fetchCharacters() {
-        NetworkManager.shared.fetch(dataType: CharacterApp.self ,url: Link.url.rawValue) { characterApp in
-            self.characters = characterApp.results
-            self.collectionView.reloadData()
+        NetworkManager.shared.fetch(dataType: CharacterApp.self ,url: Link.url.rawValue) { result in
+            switch result {
+            case .success(let characterApp):
+                self.characters = characterApp.results
+                self.collectionView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 }

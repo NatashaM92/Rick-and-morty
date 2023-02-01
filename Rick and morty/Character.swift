@@ -4,7 +4,6 @@
 //
 //  Created by Наталья Миронова on 25.01.2023.
 //
-import Foundation
 
 struct CharacterApp: Decodable {
     let results: [Character]
